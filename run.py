@@ -27,4 +27,4 @@ async def on_member_remove(member):
     await channel.send("{}님이 나가셨어요.. 다음에 다시봐요!".format(member))
 
 access_token = os.environ["BOT_TOKENT"]
-app.run(access_toke)
+app.run(access_token)
