@@ -2,6 +2,7 @@ from typing import List, Any, Dict
 
 import discord
 from discord.ext import commands
+import os
 
 app = commands.Bot(command_prefix='/')
 app.remove_command("help")
@@ -25,4 +26,5 @@ async def on_member_remove(member):
     channel = app.get_channel(id=704978414188232815) # id= 후에 채널 아이디을 넣으면 거기로 가짐
     await channel.send("{}님이 나가셨어요.. 다음에 다시봐요!".format(member))
 
-app.run(tokn)
+access_token = os.environ["BOT_TOKENT"]
+app.run(access_toke)
